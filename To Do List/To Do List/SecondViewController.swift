@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var item: UITextField!
     @IBAction func addItem(sender: AnyObject) {
@@ -34,7 +34,7 @@ class SecondViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         item.resignFirstResponder()
         
         return true
